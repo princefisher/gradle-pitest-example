@@ -8,8 +8,13 @@ import org.princefisher.HelloWorld;
 class HelloWorldTest {
 
   @Test
-  void testToString() {
+  void testGoodDay() {
     var cut = new HelloWorld(true);
-    assertEquals("org.princefisher.HelloWorld, today is a good day!", cut.toString());
+    assertEquals("HelloWorld, today is a good day!", cut.toString());
+  }
+  @Test
+  void testBadDay() {
+    var cut = new HelloWorld(false);
+    assertEquals("The apocalypse is near...", cut.toString());
   }
 }

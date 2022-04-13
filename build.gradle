@@ -11,21 +11,18 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
-
 
 test {
     useJUnitPlatform()
 }
 
-//build.dependsOn 'pitest'
+build.dependsOn 'pitest'
 
-//pitest {
-////    targetClasses = ['our.base.package.*']  //by default "${project.group}.*"
-////    pitestVersion = '1.7.4' //not needed when a default PIT version should be used
-//    threads = 4
-//    outputFormats = ['XML', 'HTML']
-//    timestampedReports = true
-//}
+pitest {
+    junit5PluginVersion = '0.15'
+    outputFormats = ['XML', 'HTML']
+    timestampedReports = true
+}
