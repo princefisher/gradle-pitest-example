@@ -24,5 +24,8 @@ build.dependsOn 'pitest'
 pitest {
     junit5PluginVersion = '0.15'
     outputFormats = ['XML', 'HTML']
-    timestampedReports = true
+//    timestampedReports = true
+    timestampedReports = false
+    coverageThreshold = 100
+    mutationThreshold = 87
 }
