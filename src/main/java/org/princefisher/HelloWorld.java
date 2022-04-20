@@ -10,7 +10,7 @@ public class HelloWorld {
   @Override
   public String toString() {
     var sb = new StringBuilder();
-    if (isGoodDay) {
+    if (isGoodDay()) {
       sb.append("HelloWorld, today is a good day!");
     } else {
       sb.append("The apocalypse is near...");
