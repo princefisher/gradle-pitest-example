@@ -16,4 +16,13 @@ Run via:
 ```
 
 ## Reporting
-Reports can be found in the `./build/reports/pitest/<timestamp>` directories...
+Reports can be found in the `./build/reports/pitest/` directories...
+
+### SonarQube
+
+```bash
+# optional
+./gradlew clean
+# run the build (+test+pitest) and sonarqube tasks
+./gradlew -Dsonar.host.url="http://localhost:9000" -Dsonar.login="admin" -Dsonar.password="admin123" build sonarqube
+```
